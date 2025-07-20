@@ -7,6 +7,7 @@ local options = {
     js = { "prettier" },
     ts = { "prettier" },
     go = { "goimports", "gofmt" },
+    nix = {"alejandra"}
   },
 
   format_on_save = {

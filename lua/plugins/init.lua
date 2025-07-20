@@ -1,17 +1,38 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = "BufWritePre", -- uncomment for format on save
+    event = "BufWritePre", 
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
+{
+  "WhoIsSethDaniel/mason-tool-installer.nvim",
+    lazy = false,
+  opts = {
+    ensure_installed = {
+"lua-language-server",
+    "alejandra",
+    "goimports",
+    "gopls",
+    "html-lsp",
+    "json-lsp",
+    "nixfmt",
+    "nixpkgs-fmt",
+    "prettier",
+    "prettierd",
+    "stylua",
+        "typescript-language-server",
+    },
+  },
+    auto_update = true,
+},
+
 
   {
     "bbjornstad/pretty-fold.nvim",
@@ -32,7 +53,4 @@ return {
       }
     end,
   },
-
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
 }

@@ -10,6 +10,7 @@ vim.opt.foldmethod = "marker"
 vim.opt.foldlevel = 99
 vim.opt.timeoutlen = 400
 vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/custom/lua_snippets"
+vim.opt.clipboard = 'unnamedplus'
 
 -- {{{ Turn off comment continue comments
 
